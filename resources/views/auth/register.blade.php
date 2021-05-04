@@ -3,13 +3,13 @@
 
     <div class="p-5">
         <div class="text-center">
-            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+            <h1 class="h4 text-gray-900 mb-4">Daftar Akun!</h1>
         </div>
         <form class="user" method="POST" action="{{ route('register') }}">
             @csrf
             <div class="form-group">
                 <input type="text" class="form-control form-control-user @error('name') is-invalid @enderror" name="name"
-                    value="{{ old('name') }}" id="exampleInputEmail" name="name" placeholder="Full Name">
+                    value="{{ old('name') }}" id="exampleInputEmail" name="name" placeholder="Nama Lengkap">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control form-control-user @error('username') is-invalid @enderror"
@@ -18,7 +18,17 @@
             </div>
             <div class="form-group">
                 <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email"
-                    value="{{ old('email') }}" id="exampleInputEmail" name="email" placeholder="Email Address">
+                    value="{{ old('email') }}" id="exampleInputEmail" name="email" placeholder="Alamat Email">
+            </div>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend ">
+                        <div class="input-group-text form-control-user-prepend-left">+62</div>
+                    </div>
+                    <input type="text" class="form-control form-control-user-right @error('phone') is-invalid @enderror"
+                        name="phone" value="{{ old('phone') }}" id="inlineFormInputGroup"
+                        placeholder="Nomor Hp / Whatsapp">
+                </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
@@ -32,7 +42,7 @@
                 </div>
                 <div class="col-sm-6">
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword"
-                        name="password_confirmation" placeholder="Repeat Password">
+                        name="password_confirmation" placeholder="Ulang Password">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -47,10 +57,10 @@
         </form>
         <hr>
         <div class="text-center">
-            <a class="small" href="forgot-password.html">Forgot Password?</a>
+            <a class="small" href="forgot-password.html">Lupa Password?</a>
         </div>
         <div class="text-center">
-            <a class="small" href="{{ route('login') }}">Already have an account? Login!</a>
+            <a class="small" href="{{ route('login') }}">Sudah jadi reseller? Login!</a>
         </div>
     </div>
 

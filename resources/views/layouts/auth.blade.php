@@ -19,6 +19,21 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('assets/sb/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <style>
+        .form-control-user-right {
+            border-top-right-radius: 10rem;
+            border-bottom-right-radius: 10rem;
+            padding: 1.5rem 1rem;
+            font-size: .8rem;
+        }
+
+        .form-control-user-prepend-left {
+            border-top-left-radius: 10rem;
+            border-bottom-left-radius: 10rem;
+            font-size: .8rem;
+        }
+
+    </style>
 
 </head>
 

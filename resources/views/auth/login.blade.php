@@ -16,11 +16,20 @@
                 </span>
                 @enderror
             </div> --}}
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <input type="text" class="form-control form-control-user @error('username') is-invalid @enderror"
                     name="username" id="exampleInputUsername" aria-describedby="usernameHelp"
                     placeholder="Enter Username...">
                 @error('username')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div> --}}
+            <div class="form-group">
+                <input type="text" class="form-control form-control-user @error('phone') is-invalid @enderror" name="phone"
+                    id="exampleInputPhone" aria-describedby="phoneHelp" placeholder="Masukan No. Hp...">
+                @error('phone')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

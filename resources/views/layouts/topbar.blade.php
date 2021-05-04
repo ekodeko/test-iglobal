@@ -20,11 +20,14 @@
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <div class="card-image" style="width: 32px;height: auto;">
+                    <img class="img-profile rounded-circle"
+                        src="{{ Auth::user()->profile_picture != 'default_profile_picture.png' ? asset('images/reseller/' . Auth::user()->profile_picture) : asset('assets/sb/img/default_profile_picture.png') }}">
+                </div>
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{{ url('user/profile') }}">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
